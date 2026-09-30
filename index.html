@@ -21,8 +21,13 @@
     .btn{display:inline-block;padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:700}
     .primary{background:#fff;color:#0b4ea2}.secondary{border:1px solid #bcd8ff;color:#fff}
     <img src="tyre.jpg"=tyre"
-    .tyre{<img src="tyre.jpg" alt="Tyre">;border:35px solid #182335;background:#0a1120;box-shadow:0 0 0 12px #315f94 inset,0 0 30px #06142b;margin:auto;position:relative}
-    .tyre:after{content:"";position:absolute;width:80px;height:80px;background:#dbe8f6;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 18px #879ab2 inset}
+    tyre-photo{
+      width:230px;
+      height:230px;
+      object-fit:contain;
+      margin:auto;
+      display:block;
+    }
     section{max-width:1100px;margin:auto;padding:55px 18px}
     .title{text-align:center;margin-bottom:30px}.title h2{font-size:32px}.title p{color:#65738a}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -57,14 +62,14 @@
   </nav>
 
   <div class="hero">
-    <div>
+    <img class="tyre-photo" src="tyre.jpg" alt="Balaji Tyres">
       <h1>Quality Tyres.<br><span>Reliable Service.</span></h1>
       <p>Bike & Car Tyres • Wholesale & Retail • Puncture Solutions</p>
       <div class="btns">
         <a class="btn primary" href="tel:+919226366377">📞 Call Now</a>
         <a class="btn secondary" href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20to%20check%20tyre%20price%20and%20availability." target="_blank">💬 WhatsApp</a>
-      </div>
-    </div>
+      </div> class="tyre"></div>
+    </div> 
     <div class="tyre"></div>
   </div>
 </header>
