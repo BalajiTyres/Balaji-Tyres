@@ -23,7 +23,8 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
+    /* ================= HEADER ================= */
+
     header {
       background: linear-gradient(135deg, #071d49, #0b4ea2);
       color: white;
@@ -58,7 +59,8 @@
       font-weight: 600;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
+
     .hero {
       max-width: 1100px;
       margin: 55px auto 0;
@@ -120,7 +122,8 @@
       color: #fff;
     }
 
-    /* COMMON SECTION */
+    /* ================= COMMON ================= */
+
     section {
       max-width: 1100px;
       margin: auto;
@@ -140,7 +143,8 @@
       color: #65738a;
     }
 
-    /* CARDS */
+    /* ================= CARDS ================= */
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -168,7 +172,8 @@
       color: #66758b;
     }
 
-    /* BKT TYRE LIST */
+    /* ================= BKT CATALOGUE ================= */
+
     .catalogue {
       background: white;
       border-radius: 18px;
@@ -178,11 +183,33 @@
     }
 
     .catalogue-title {
-      background: #0b4ea2;
+      background: linear-gradient(135deg, #0b4ea2, #071d49);
       color: white;
-      padding: 18px 20px;
-      font-size: 22px;
+      padding: 20px;
+      font-size: 24px;
       font-weight: 800;
+    }
+
+    /* SEARCH */
+
+    .search-box {
+      padding: 20px;
+      background: #f7faff;
+      border-bottom: 1px solid #e1e8f0;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #cdd9e8;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: #0b4ea2;
+      box-shadow: 0 0 0 3px #0b4ea220;
     }
 
     .table-wrapper {
@@ -192,7 +219,7 @@
     .tyre-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 700px;
+      min-width: 850px;
     }
 
     .tyre-table th {
@@ -200,52 +227,62 @@
       color: #071d49;
       font-weight: 800;
       text-align: left;
-      padding: 13px 12px;
+      padding: 14px 12px;
       border-bottom: 2px solid #d4e4f7;
+      white-space: nowrap;
     }
 
     .tyre-table td {
       padding: 12px;
       border-bottom: 1px solid #e7edf4;
       color: #26344a;
+      white-space: nowrap;
     }
 
     .tyre-table tr:hover {
       background: #f7fbff;
     }
 
-    .position {
+    .fitment {
       font-weight: 700;
       color: #0b4ea2;
     }
 
-    .stock-badge {
+    .type-badge {
       display: inline-block;
-      background: #e8f7ed;
-      color: #16733a;
-      padding: 4px 10px;
+      background: #eef4ff;
+      color: #0b4ea2;
+      padding: 4px 9px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 700;
     }
 
-    /* BRANDS */
-    .brands {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      background: #0b4ea2;
+    .price-btn {
+      display: inline-block;
+      background: #25d366;
       color: white;
-      padding: 12px 25px;
-      border-radius: 50px;
-      font-weight: 800;
+      padding: 8px 12px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    /* WHOLESALE */
+    .price-btn:hover {
+      background: #1ebe5d;
+    }
+
+    .no-result {
+      display: none;
+      padding: 25px;
+      text-align: center;
+      color: #65738a;
+      font-weight: 600;
+    }
+
+    /* ================= WHOLESALE ================= */
+
     .wholesale {
       background: linear-gradient(135deg, #0b4ea2, #071d49);
       color: white;
@@ -263,7 +300,25 @@
       color: #e4efff;
     }
 
-    /* CONTACT */
+    /* ================= BRANDS ================= */
+
+    .brands {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      background: #0b4ea2;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 800;
+    }
+
+    /* ================= CONTACT ================= */
+
     .contact {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -283,7 +338,8 @@
       text-decoration: none;
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
+
     footer {
       background: #071d49;
       color: #dceaff;
@@ -291,7 +347,8 @@
       padding: 25px 15px;
     }
 
-    /* MOBILE */
+    /* ================= MOBILE ================= */
+
     @media(max-width: 750px) {
 
       nav {
@@ -333,17 +390,26 @@
       .title h2 {
         font-size: 28px;
       }
+
+      .catalogue-title {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
   <nav>
+
     <div class="logo">
       बालाजी TYRES
       <span>BEED • TYRE & AUTO SERVICES</span>
@@ -355,6 +421,7 @@
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
 
@@ -374,14 +441,16 @@
 
       <div class="btns">
 
-        <a class="btn primary"
-           href="tel:+919226366377">
+        <a
+          class="btn primary"
+          href="tel:+919226366377">
           📞 Call Now
         </a>
 
-        <a class="btn secondary"
-           href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20to%20check%20tyre%20price%20and%20availability."
-           target="_blank">
+        <a
+          class="btn secondary"
+          href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20to%20check%20tyre%20price%20and%20availability."
+          target="_blank">
           💬 WhatsApp
         </a>
 
@@ -392,13 +461,11 @@
 
     <div class="hero-image">
 
-      <!-- tyre.jpg file same folder me rakhein -->
-
       <img
         class="tyre-photo"
         src="tyre.jpg"
         alt="Balaji Tyres">
-      
+
     </div>
 
   </div>
@@ -406,7 +473,9 @@
 </header>
 
 
-<!-- ================= PRODUCTS ================= -->
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
 
 <section id="products">
 
@@ -469,7 +538,9 @@
 </section>
 
 
-<!-- ================= BKT TYRE CATALOGUE ================= -->
+<!-- =====================================================
+     BKT TYRE CATALOGUE
+===================================================== -->
 
 <section id="catalogue">
 
@@ -478,7 +549,7 @@
     <h2>BKT Tyre Catalogue</h2>
 
     <p>
-      Available BKT tyre sizes and fitments
+      Search tyre size, model or fitment
     </p>
 
   </div>
@@ -491,6 +562,21 @@
     </div>
 
 
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="tyreSearch"
+        placeholder="🔎 Search tyre name, size, rim or fitment..."
+        onkeyup="searchTyres()">
+
+    </div>
+
+
+    <!-- TABLE -->
+
     <div class="table-wrapper">
 
       <table class="tyre-table">
@@ -498,240 +584,650 @@
         <thead>
 
           <tr>
+
             <th>Tyre Name</th>
+
             <th>Tyre Size</th>
+
             <th>Rim Size</th>
+
             <th>Fitment</th>
+
             <th>TT / TL</th>
-            <th>Status</th>
+
+            <th>Enquiry</th>
+
           </tr>
 
         </thead>
 
 
-        <tbody>
+        <tbody id="tyreTable">
 
-          <!-- ZENOVA STREET R1 -->
+
+          <!-- ================= REAR TYRES ================= -->
+
 
           <tr>
+
             <td>BKT ZENOVA STREET R1</td>
+
             <td>80/100-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20STREET%20R1%2080%2F100-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA STREET R1</td>
+
             <td>80/100-17</td>
+
             <td>17</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20STREET%20R1%2080%2F100-17%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA SPORT R1</td>
+
             <td>90/100-10</td>
+
             <td>10</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20SPORT%20R1%2090%2F100-10%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA SPORT R1</td>
+
             <td>90/90-12</td>
+
             <td>12</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20SPORT%20R1%2090%2F90-12%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA SPORT R1</td>
+
             <td>80/100-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20SPORT%20R1%2080%2F100-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA SPORT R1</td>
+
             <td>80/100-17</td>
+
             <td>17</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20SPORT%20R1%2080%2F100-17%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA SPORT R1</td>
+
             <td>100/90-17</td>
+
             <td>17</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20SPORT%20R1%20100%2F90-17%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA SPORT R2</td>
+
             <td>100/90-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%20SPORT%20R2%20100%2F90-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
 
-          <!-- THYROS STREET -->
+          <!-- ================= THYROS ================= -->
+
 
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>90/100-10</td>
+
             <td>10</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%2090%2F100-10%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>90/90-12</td>
+
             <td>12</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%2090%2F90-12%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>80/100-17</td>
+
             <td>17</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%2080%2F100-17%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>80/100-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%2080%2F100-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>2.75-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%202.75-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>3.00-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%203.00-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R1</td>
+
             <td>3.00-17</td>
+
             <td>17</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R1%203.00-17%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT THYROS STREET R2</td>
+
             <td>80/100-18</td>
+
             <td>18</td>
-            <td class="position">Rear</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Rear</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20THYROS%20STREET%20R2%2080%2F100-18%20Rear."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
 
-          <!-- FRONT -->
+          <!-- ================= FRONT ================= -->
+
 
           <tr>
+
             <td>BKT ZENOVA</td>
+
             <td>80/100-18</td>
+
             <td>18</td>
-            <td class="position">Front</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Front</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%2080%2F100-18%20Front."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA</td>
+
             <td>80/100-17</td>
+
             <td>17</td>
-            <td class="position">Front</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Front</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%2080%2F100-17%20Front."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA</td>
+
             <td>2.75-18</td>
+
             <td>18</td>
-            <td class="position">Front</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Front</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%202.75-18%20Front."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA</td>
+
             <td>2.75-18</td>
+
             <td>18</td>
-            <td class="position">Front</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Front</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%202.75-18%20Front."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOVA</td>
+
             <td>2.75-17</td>
+
             <td>17</td>
-            <td class="position">Front</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">Front</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOVA%202.75-17%20Front."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
 
-          <!-- ALL WHEEL -->
+          <!-- ================= ALL WHEEL ================= -->
+
 
           <tr>
+
             <td>BKT ZENOV STREET</td>
+
             <td>90/100-10</td>
+
             <td>10</td>
-            <td class="position">All Wheel</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">All Wheel</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOV%20STREET%2090%2F100-10%20All%20Wheel."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
 
+
           <tr>
+
             <td>BKT ZENOV STREET</td>
+
             <td>90/90-12</td>
+
             <td>12</td>
-            <td class="position">All Wheel</td>
-            <td>TL</td>
-            <td><span class="stock-badge">Available</span></td>
+
+            <td class="fitment">All Wheel</td>
+
+            <td>
+              <span class="type-badge">TL</span>
+            </td>
+
+            <td>
+              <a
+                class="price-btn"
+                href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20price%20for%20BKT%20ZENOV%20STREET%2090%2F90-12%20All%20Wheel."
+                target="_blank">
+                💬 Check Price
+              </a>
+            </td>
+
           </tr>
+
 
         </tbody>
 
       </table>
+
+    </div>
+
+
+    <div
+      class="no-result"
+      id="noResult">
+
+      ❌ No tyre found.
+      Please try another size or model.
 
     </div>
 
@@ -740,7 +1236,9 @@
 </section>
 
 
-<!-- ================= WHOLESALE ================= -->
+<!-- =====================================================
+     WHOLESALE
+===================================================== -->
 
 <section>
 
@@ -759,7 +1257,9 @@
       class="btn primary"
       href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20please%20send%20me%20wholesale%20rates."
       target="_blank">
+
       Get Wholesale Rates
+
     </a>
 
   </div>
@@ -767,7 +1267,9 @@
 </section>
 
 
-<!-- ================= BRANDS ================= -->
+<!-- =====================================================
+     BRANDS
+===================================================== -->
 
 <section>
 
@@ -793,7 +1295,9 @@
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section id="services">
 
@@ -879,7 +1383,9 @@
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section id="contact">
 
@@ -910,7 +1416,9 @@
       <a
         href="https://www.google.com/maps/search/?api=1&query=Balaji%20Tyres%2C%20Champavati%20School%20Complex%2C%20A.%20Nagar%20Road%2C%20Beed%20431122"
         target="_blank">
+
         Open in Google Maps →
+
       </a>
 
     </div>
@@ -935,7 +1443,9 @@
       <a
         href="https://wa.me/919226366377"
         target="_blank">
+
         Chat on WhatsApp →
+
       </a>
 
     </div>
@@ -945,7 +1455,9 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -960,6 +1472,67 @@
   © 2026 Balaji Tyres. All rights reserved.
 
 </footer>
+
+
+<!-- =====================================================
+     SEARCH SCRIPT
+===================================================== -->
+
+<script>
+
+function searchTyres() {
+
+  const input =
+    document.getElementById("tyreSearch");
+
+  const filter =
+    input.value.toLowerCase().trim();
+
+  const table =
+    document.getElementById("tyreTable");
+
+  const rows =
+    table.getElementsByTagName("tr");
+
+  const noResult =
+    document.getElementById("noResult");
+
+  let visibleRows = 0;
+
+
+  for (let i = 0; i < rows.length; i++) {
+
+    const text =
+      rows[i].innerText.toLowerCase();
+
+    if (text.includes(filter)) {
+
+      rows[i].style.display = "";
+
+      visibleRows++;
+
+    } else {
+
+      rows[i].style.display = "none";
+
+    }
+
+  }
+
+
+  if (visibleRows === 0) {
+
+    noResult.style.display = "block";
+
+  } else {
+
+    noResult.style.display = "none";
+
+  }
+
+}
+
+</script>
 
 
 </body>
