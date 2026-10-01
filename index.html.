@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Balaji Tyres | Beed</title>
+
+  <meta name="description"
+    content="Balaji Tyres, Beed - Bike & Car Tyres, tubes, puncture repair materials, nitrogen air and tyre services. Wholesale & retail.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f8fc;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #071d49, #0b4ea2);
+      color: white;
+      padding: 22px 18px 70px;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #cfe4ff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: 55px auto 0;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 52px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .hero-content h1 span {
+      color: #7ec8ff;
+    }
+
+    .hero-content p {
+      font-size: 19px;
+      color: #e4efff;
+      margin-bottom: 25px;
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+
+    .tyre-photo {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+      display: block;
+      margin: auto;
+    }
+
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .primary {
+      background: #fff;
+      color: #0b4ea2;
+    }
+
+    .secondary {
+      border: 1px solid #bcd8ff;
+      color: #fff;
+    }
+
+    /* COMMON SECTION */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 18px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .title h2 {
+      font-size: 32px;
+    }
+
+    .title p {
+      color: #65738a;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px #14213d12;
+      border: 1px solid #e4ebf4;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      color: #66758b;
+    }
+
+    /* BKT TYRE LIST */
+    .catalogue {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e1e8f0;
+      box-shadow: 0 6px 22px #14213d12;
+    }
+
+    .catalogue-title {
+      background: #0b4ea2;
+      color: white;
+      padding: 18px 20px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    .tyre-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    .tyre-table th {
+      background: #eaf3ff;
+      color: #071d49;
+      font-weight: 800;
+      text-align: left;
+      padding: 13px 12px;
+      border-bottom: 2px solid #d4e4f7;
+    }
+
+    .tyre-table td {
+      padding: 12px;
+      border-bottom: 1px solid #e7edf4;
+      color: #26344a;
+    }
+
+    .tyre-table tr:hover {
+      background: #f7fbff;
+    }
+
+    .position {
+      font-weight: 700;
+      color: #0b4ea2;
+    }
+
+    .stock-badge {
+      display: inline-block;
+      background: #e8f7ed;
+      color: #16733a;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* BRANDS */
+    .brands {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      background: #0b4ea2;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 800;
+    }
+
+    /* WHOLESALE */
+    .wholesale {
+      background: linear-gradient(135deg, #0b4ea2, #071d49);
+      color: white;
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .wholesale h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .wholesale p {
+      color: #e4efff;
+    }
+
+    /* CONTACT */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid #e4ebf4;
+    }
+
+    .contact-box a {
+      color: #0b4ea2;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #071d49;
+      color: #dceaff;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    /* MOBILE */
+    @media(max-width: 750px) {
+
+      nav {
+        align-items: flex-start;
+      }
+
+      nav div:last-child {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 35px;
+      }
+
+      .hero-content h1 {
+        font-size: 40px;
+      }
+
+      .btns {
+        justify-content: center;
+      }
+
+      .tyre-photo {
+        width: 200px;
+        height: 200px;
+      }
+
+      .cards,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 42px 15px;
+      }
+
+      .title h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <nav>
+    <div class="logo">
+      बालाजी TYRES
+      <span>BEED • TYRE & AUTO SERVICES</span>
+    </div>
+
+    <div>
+      <a href="#products">Products</a>
+      <a href="#catalogue">BKT List</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <div class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Quality Tyres.<br>
+        <span>Reliable Service.</span>
+      </h1>
+
+      <p>
+        Bike & Car Tyres • Wholesale & Retail •
+        Puncture Solutions
+      </p>
+
+      <div class="btns">
+
+        <a class="btn primary"
+           href="tel:+919226366377">
+          📞 Call Now
+        </a>
+
+        <a class="btn secondary"
+           href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20I%20want%20to%20check%20tyre%20price%20and%20availability."
+           target="_blank">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+      <!-- tyre.jpg file same folder me rakhein -->
+
+      <img
+        class="tyre-photo"
+        src="tyre.jpg"
+        alt="Balaji Tyres">
+      
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+  <div class="title">
+
+    <h2>Our Products</h2>
+
+    <p>
+      Tyres, tubes and puncture materials available.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">🛞</div>
+
+      <h3>Bike & Car Tyres</h3>
+
+      <p>
+        Multiple sizes and brands available.
+        Contact us for current price and stock.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">⚫</div>
+
+      <h3>All Size Tubes</h3>
+
+      <p>
+        Tubes available in different sizes
+        at wholesale rates.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🔧</div>
+
+      <h3>Puncture Materials</h3>
+
+      <p>
+        Vadi pocket patches and other
+        puncture repair materials available.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BKT TYRE CATALOGUE ================= -->
+
+<section id="catalogue">
+
+  <div class="title">
+
+    <h2>BKT Tyre Catalogue</h2>
+
+    <p>
+      Available BKT tyre sizes and fitments
+    </p>
+
+  </div>
+
+
+  <div class="catalogue">
+
+    <div class="catalogue-title">
+      🛞 BKT Tyre List
+    </div>
+
+
+    <div class="table-wrapper">
+
+      <table class="tyre-table">
+
+        <thead>
+
+          <tr>
+            <th>Tyre Name</th>
+            <th>Tyre Size</th>
+            <th>Rim Size</th>
+            <th>Fitment</th>
+            <th>TT / TL</th>
+            <th>Status</th>
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+          <!-- ZENOVA STREET R1 -->
+
+          <tr>
+            <td>BKT ZENOVA STREET R1</td>
+            <td>80/100-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA STREET R1</td>
+            <td>80/100-17</td>
+            <td>17</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA SPORT R1</td>
+            <td>90/100-10</td>
+            <td>10</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA SPORT R1</td>
+            <td>90/90-12</td>
+            <td>12</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA SPORT R1</td>
+            <td>80/100-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA SPORT R1</td>
+            <td>80/100-17</td>
+            <td>17</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA SPORT R1</td>
+            <td>100/90-17</td>
+            <td>17</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA SPORT R2</td>
+            <td>100/90-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+
+          <!-- THYROS STREET -->
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>90/100-10</td>
+            <td>10</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>90/90-12</td>
+            <td>12</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>80/100-17</td>
+            <td>17</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>80/100-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>2.75-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>3.00-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R1</td>
+            <td>3.00-17</td>
+            <td>17</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT THYROS STREET R2</td>
+            <td>80/100-18</td>
+            <td>18</td>
+            <td class="position">Rear</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+
+          <!-- FRONT -->
+
+          <tr>
+            <td>BKT ZENOVA</td>
+            <td>80/100-18</td>
+            <td>18</td>
+            <td class="position">Front</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA</td>
+            <td>80/100-17</td>
+            <td>17</td>
+            <td class="position">Front</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA</td>
+            <td>2.75-18</td>
+            <td>18</td>
+            <td class="position">Front</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA</td>
+            <td>2.75-18</td>
+            <td>18</td>
+            <td class="position">Front</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOVA</td>
+            <td>2.75-17</td>
+            <td>17</td>
+            <td class="position">Front</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+
+          <!-- ALL WHEEL -->
+
+          <tr>
+            <td>BKT ZENOV STREET</td>
+            <td>90/100-10</td>
+            <td>10</td>
+            <td class="position">All Wheel</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+          <tr>
+            <td>BKT ZENOV STREET</td>
+            <td>90/90-12</td>
+            <td>12</td>
+            <td class="position">All Wheel</td>
+            <td>TL</td>
+            <td><span class="stock-badge">Available</span></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHOLESALE ================= -->
+
+<section>
+
+  <div class="wholesale">
+
+    <h2>Wholesale Rates Available</h2>
+
+    <p>
+      Tyres • Tubes • Vadi Pocket Patches •
+      Puncture Repair Materials
+    </p>
+
+    <br>
+
+    <a
+      class="btn primary"
+      href="https://wa.me/919226366377?text=Hello%20Balaji%20Tyres,%20please%20send%20me%20wholesale%20rates."
+      target="_blank">
+      Get Wholesale Rates
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BRANDS ================= -->
+
+<section>
+
+  <div class="title">
+
+    <h2>Brands</h2>
+
+    <p>
+      Brands available at Balaji Tyres
+    </p>
+
+  </div>
+
+
+  <div class="brands">
+
+    <div class="brand">BKT</div>
+    <div class="brand">CEAT</div>
+    <div class="brand">TVS</div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+  <div class="title">
+
+    <h2>Our Services</h2>
+
+    <p>
+      Convenient tyre care at one place.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">🛠️</div>
+
+      <h3>Tyre Fitting</h3>
+
+      <p>
+        Tyre fitting and basic tyre service.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🔩</div>
+
+      <h3>Puncture Repair</h3>
+
+      <p>
+        Puncture repair and related materials available.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">💨</div>
+
+      <h3>Nitrogen Air</h3>
+
+      <p>
+        Nitrogen air available for tyres.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🚿</div>
+
+      <h3>Washing</h3>
+
+      <p>
+        Vehicle washing service available.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📏</div>
+
+      <h3>Air Pressure Check</h3>
+
+      <p>
+        Check your tyre air pressure at the shop.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="title">
+
+    <h2>Contact Balaji Tyres</h2>
+
+    <p>
+      Call or WhatsApp for price & availability.
+    </p>
+
+  </div>
+
+
+  <div class="contact">
+
+    <div class="contact-box">
+
+      <h3>📍 Visit Us</h3>
+
+      <p>
+        Champavati School Complex,<br>
+        A. Nagar Road, Beed – 431122
+      </p>
+
+      <br>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Balaji%20Tyres%2C%20Champavati%20School%20Complex%2C%20A.%20Nagar%20Road%2C%20Beed%20431122"
+        target="_blank">
+        Open in Google Maps →
+      </a>
+
+    </div>
+
+
+    <div class="contact-box">
+
+      <h3>📞 Call / WhatsApp</h3>
+
+      <p>
+        For tyre price, stock and wholesale enquiries.
+      </p>
+
+      <br>
+
+      <a href="tel:+919226366377">
+        Call: 9226366377
+      </a>
+
+      <br><br>
+
+      <a
+        href="https://wa.me/919226366377"
+        target="_blank">
+        Chat on WhatsApp →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <strong>बालाजी TYRES</strong>
+
+  <br>
+
+  Bike & Car Tyres • Wholesale & Retail
+
+  <br>
+
+  © 2026 Balaji Tyres. All rights reserved.
+
+</footer>
+
+
+</body>
+</html>
